@@ -1,11 +1,13 @@
 console.log("mainCtrl");
 
-app.controller('MainCtrl', function ($scope, $http, getMLBFactory) {
+
+app.controller('MainCtrl', function ($scope, getMLBFactory, getTeamFactory) {
 
   // $http
   //   .get('http://mlb.mlb.com/partnerxml/gen/news/rss/atl.xml')
-  $scope.test = (url) => {
-    getMLBFactory.getData(url)
+  $scope.test = (test2) => {
+    console.log("test2", test2);
+    getMLBFactory.getData(test2)
       .then(function (lists) {
         console.log(lists)
         $scope.lists = lists
@@ -13,14 +15,22 @@ app.controller('MainCtrl', function ($scope, $http, getMLBFactory) {
 
   }
 
-  $scope.test()
+  $scope.test2 = () => {
+    getTeamFactory.getTeam()
+      .then(function (team) {
+        console.log(team)
+        $scope.test(team)
+
+      })
+  }
+
+  $scope.test2()
 
 
-  $http
-    .get('mockdb/teamdb.json')
-    .then(function (data) {
-      console.log('mockdb', data.data.teams.Atlanta)
-    })
+
+
+
+
 
 
       //

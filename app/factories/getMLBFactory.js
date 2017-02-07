@@ -2,7 +2,7 @@ app.factory('getMLBFactory', function ($http) {
   return{
     getData : (url) => {
       return $http
-        .get('http://mlb.mlb.com/partnerxml/gen/news/rss/atl.xml')
+        .get(`${url}`)
         .then(function(data) {
           console.log("data", data);
 
