@@ -1,19 +1,24 @@
-app.factory('getMLBFactory', function ($http) {
-  return{
-    getData : (url) => {
-      return $http
-        .get(`${url}`)
+app.factory('getMLBFactory', function ($http, $q) {
+  let parseData = {};
+  return {
+    setData : (newArray) => {
+      return $q.all(newArray)
         .then(function(data) {
           console.log("data", data);
+          for (var i = 0; i < data.length; i++) {
+            let text = data[i].data
+            let parser = new DOMParser();
+            let xmlDoc = parser.parseFromString(text, 'text/xml');
+            console.log("xmlDoc", xmlDoc)
+            parseData[i]= xmlDoc.getElementsByTagName("item")
+            console.log("parseData", parseData);
+          }
 
-          let text, parser, xmlDoc;
-
-          text = data.data
-          parser = new DOMParser();
-          xmlDoc = parser.parseFromString(text, 'text/xml');
-          console.log("xmlDoc", xmlDoc)
-          return xmlDoc.getElementsByTagName("item")
+          return parseData
         })
-    }//getData
+    },//setData
+    getData : () => {
+      return parseData;
+    }
   } //return
 })//factory
