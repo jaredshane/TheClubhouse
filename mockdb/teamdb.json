@@ -1,8 +1,24 @@
 {
   "teams": {
-    "Atlanta": "http://mlb.mlb.com/partnerxml/gen/news/rss/atl.xml",
-    "second": "",
-    "third": "",
-    "fourth": ""
+    "Atlanta": {
+      "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/atl.xml",
+      "mlbtr": "http://www.mlbtraderumors.com/atlanta-braves/feed"
+    },
+    "Miami": {
+      "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/mia.xml",
+      "mlbtr": "http://www.mlbtraderumors.com/atlanta-braves/feed"
+    },
+    "New York NL": {
+      "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/nym.xml",
+      "mlbtr": "http://www.mlbtraderumors.com/atlanta-braves/feed"
+    },
+    "Washington": {
+      "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/was.xml",
+      "mlbtr": "http://www.mlbtraderumors.com/atlanta-braves/feed"
+    },
+    "Philadelphia": {
+      "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/phi.xml",
+      "mlbtr": "http://www.mlbtraderumors.com/atlanta-braves/feed"
+    }
   }
 }
