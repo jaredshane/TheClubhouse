@@ -11,15 +11,6 @@ app.controller('MainCtrl', function ($scope, getMLBFactory, getTeamFactory) {
 
   }
 
-  // $scope.test2 = () => {
-  //   getTeamFactory.getTeam()
-  //     .then(function (team) {
-  //       console.log(team)
-  //       $scope.test(team)
-  //
-  //     })
-  // }
-
   $scope.test()
 
 
