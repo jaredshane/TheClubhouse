@@ -1,30 +1,26 @@
-console.log("mainCtrl");
-
 
 app.controller('MainCtrl', function ($scope, getMLBFactory, getTeamFactory) {
 
-  // $http
-  //   .get('http://mlb.mlb.com/partnerxml/gen/news/rss/atl.xml')
-  $scope.test = (test2) => {
-    console.log("test2", test2);
-    getMLBFactory.getData(test2)
-      .then(function (lists) {
-        console.log(lists)
-        $scope.lists = lists
-      })
+    $scope.test = () => {
+      console.log("getMLBFactory.getData()", getMLBFactory.getData());
+      $scope.lists = getMLBFactory.getData()
+      // .then(function (lists) {
+      //   console.log(lists)
+      //   $scope.lists = lists
+
 
   }
 
-  $scope.test2 = () => {
-    getTeamFactory.getTeam()
-      .then(function (team) {
-        console.log(team)
-        $scope.test(team)
+  // $scope.test2 = () => {
+  //   getTeamFactory.getTeam()
+  //     .then(function (team) {
+  //       console.log(team)
+  //       $scope.test(team)
+  //
+  //     })
+  // }
 
-      })
-  }
-
-  $scope.test2()
+  $scope.test()
 
 
 
