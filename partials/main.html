@@ -1,16 +1,22 @@
 <h1>Main Partial</h1>
 
-<div class="hey">
+<div>
   <!-- <h1><a href="{{mlblink}}">{{mlbtitle}}</a></h1>
   <p>{{mlbdescription}}</p> -->
 
 
 
-  <div ng-repeat="list in lists|limitTo:6" ng-if="!$first">
+  <div ng-repeat="list in lists">
+    <div ng-repeat="whatever in list|limitTo:6" ng-if="!$first">
+      <!-- {{whatever}} -->
+      <h1><a href="{{whatever.getElementsByTagName('link')[0].innerHTML}}">    {{whatever.getElementsByTagName('title')[0].innerHTML}}
+  </a></h1>
+    <p>{{whatever.getElementsByTagName('description')[0].innerHTML}}</p>
+    </div>
 
-    <h1><a href="{{list.getElementsByTagName('link')[0].innerHTML}}">    {{list.getElementsByTagName('title')[0].innerHTML}}
-</a></h1>
-  <p>{{list.getElementsByTagName('description')[0].innerHTML}}</p>
+
+
+
 
   </div>
 
