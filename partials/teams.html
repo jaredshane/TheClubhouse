@@ -1,0 +1,35 @@
+<h1>Team Ctrl</h1>
+
+<!-- <form name="myForm">
+  <label>Atlanta:
+    <input type="checkbox" ng-model="checkboxModel.atlanta">
+  </label><br/>
+  <label>Miami:
+    <input type="checkbox" ng-model="checkboxModel.miami">
+   </label><br/>
+   <label>New York NL:
+     <input type="checkbox" ng-model="checkboxModel.newyorknl">
+    </label><br/>
+    <label>Philadelphia:
+      <input type="checkbox" ng-model="checkboxModel.philadelphia">
+     </label><br/>
+     <label>Washington:
+       <input type="checkbox" ng-model="checkboxModel.washington">
+      </label><br/>
+  <tt>Atlanta = {{checkboxModel.atlanta}}</tt><br/>
+  <tt>Miami = {{checkboxModel.miami}}</tt><br/>
+  <input type="button" value="Get Team News">
+ </form> -->
+
+
+
+<div >
+  <label ng-repeat="teams in teamlists">
+  <input type="checkbox" ng-click="checkboxModel(teams)"> {{teams}}
+  </label>
+
+
+</div>
+
+
+<input type="button" value="Get Team News" ng-click="loopTeams()">

@@ -45,6 +45,7 @@ var newArray = []
         newArray.push($http.get(arrayofTeams[i]))
 
     }
+    console.log("newArray", newArray);
     getMLBFactory.setData(newArray).then(function (data) {
       console.log("data", data);
       $location.url("/")
