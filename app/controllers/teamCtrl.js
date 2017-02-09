@@ -5,7 +5,7 @@ var arrayofTeams = []
 
 var teamListObj;
 
-var newArray = []
+// var newArray = []
 
 //
 // var arraytest = [$http.get('http://mlb.mlb.com/partnerxml/gen/news/rss/atl.xml'), $http.get('http://mlb.mlb.com/partnerxml/gen/news/rss/mia.xml'), $http.get('http://mlb.mlb.com/partnerxml/gen/news/rss/phi.xml')]
@@ -29,25 +29,24 @@ var newArray = []
       arrayofTeams.push(teamListObj[teams].mlb)
 
 
-
       // console.log(teams)
       // console.log("arrayofTeams", arrayofTeams);
       // console.log(teamListObj[teams].mlb);
 
     };
 
-  $scope.loopTeams = () => {
-    for (var i = 0; i < arrayofTeams.length; i++) {
-      // console.log("arrayofTeams[i]", arrayofTeams[i]);
-      //   newArray.push($http.get(arrayofTeams[i]))
-
-    }
-    // console.log("newArray", newArray);
-    getMLBFactory.setData(newArray).then(function (data) {
-      // console.log("data", data);
-      $location.url("/")
-    })
-  }
+  // $scope.loopTeams = () => {
+  //   for (var i = 0; i < arrayofTeams.length; i++) {
+  //     // console.log("arrayofTeams[i]", arrayofTeams[i]);
+  //       newArray.push($http.get(arrayofTeams[i]))
+  //
+  //   }
+  //   // console.log("newArray", newArray);
+  //   getMLBFactory.setData(newArray).then(function (data) {
+  //     // console.log("data", data);
+  //     $location.url("/")
+  //   })
+  // }
 
 
   $scope.teamList = () => {
@@ -61,9 +60,26 @@ var newArray = []
         })
 
     }
-
-
     $scope.teamList()
+
+
+    $scope.loopTeamsTest = () => {
+      getMLBFactory.setDataTest(arrayofTeams)
+        .then(function (data) {
+          $location.url("/")
+        })
+
+      // for (var i = 0; i < arrayofTeams.length; i++) {
+      //   // console.log("arrayofTeams[i]", arrayofTeams[i]);
+      //     newArray.push($http.get(arrayofTeams[i]))
+      //
+      // }
+      // // console.log("newArray", newArray);
+      // getMLBFactory.setData(newArray).then(function (data) {
+      //   // console.log("data", data);
+      //   $location.url("/")
+      // })
+    }
 
 
 
