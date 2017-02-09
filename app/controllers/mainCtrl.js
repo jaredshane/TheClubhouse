@@ -2,7 +2,7 @@
 app.controller('MainCtrl', function ($scope, getMLBFactory, getTeamFactory) {
 
     $scope.test = () => {
-      console.log("getMLBFactory.getData()", getMLBFactory.getData());
+      // console.log("getMLBFactory.getData()", getMLBFactory.getData()[0][2].getElementsByTagName('link'));
       $scope.lists = getMLBFactory.getData()
       // .then(function (lists) {
       //   console.log(lists)
@@ -12,6 +12,8 @@ app.controller('MainCtrl', function ($scope, getMLBFactory, getTeamFactory) {
   }
 
   $scope.test()
+
+
 
 
 

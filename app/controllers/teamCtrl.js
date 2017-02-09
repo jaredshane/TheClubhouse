@@ -1,7 +1,4 @@
-console.log("TeamsCtrl");
-
 app.controller('TeamsCtrl', function ($scope, $http, $q, getTeamFactory, getMLBFactory, $location) {
-  console.log('heyhey')
 
 
 var arrayofTeams = []
@@ -34,20 +31,20 @@ var newArray = []
 
 
       // console.log(teams)
-      console.log("arrayofTeams", arrayofTeams);
-      console.log(teamListObj[teams].mlb);
+      // console.log("arrayofTeams", arrayofTeams);
+      // console.log(teamListObj[teams].mlb);
 
     };
 
   $scope.loopTeams = () => {
     for (var i = 0; i < arrayofTeams.length; i++) {
-      console.log("arrayofTeams[i]", arrayofTeams[i]);
-        newArray.push($http.get(arrayofTeams[i]))
+      // console.log("arrayofTeams[i]", arrayofTeams[i]);
+      //   newArray.push($http.get(arrayofTeams[i]))
 
     }
-    console.log("newArray", newArray);
+    // console.log("newArray", newArray);
     getMLBFactory.setData(newArray).then(function (data) {
-      console.log("data", data);
+      // console.log("data", data);
       $location.url("/")
     })
   }
