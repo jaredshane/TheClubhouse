@@ -21,15 +21,29 @@
   <input type="button" value="Get Team News">
  </form> -->
 
+<!-- <div ng-repeat="league in leagues">
+  <div>
+    {{league}}
+  </div>
+</div> -->
 
 
-<div >
-  <label ng-repeat="teams in teamlists">
-  <input type="checkbox" ng-click="checkboxModel(teams)"> {{teams}}
-  </label>
 
 
-</div>
+  <div ng-repeat="(key, teams) in leagues">
+    <h1>{{key}}</h1>
+
+      <label ng-repeat="(team, urls) in teams">
+      <input type="checkbox" ng-click="checkboxModel(key, team)"> {{team}}
+      </label>
 
 
-<input type="button" value="Get Team News" ng-click="loopTeamsTest()">
+
+    <!-- <label ng-repeat="teams in leagues">
+    <input type="checkbox" ng-click="checkboxModel(teams)"> {{teams}}
+    </label> -->
+
+  </div>
+
+
+<input type="button" value="Get Team News" ng-click="loopTeams()">
