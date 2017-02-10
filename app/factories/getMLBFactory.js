@@ -40,7 +40,7 @@ app.factory('getMLBFactory', function ($http, $q) {
             parseData[i]= xmlDoc.getElementsByTagName("item")
             console.log("parseData", parseData);
           }
-            return parseDataTest
+            return parseData
         })
     }//setDataTest
   } //return
