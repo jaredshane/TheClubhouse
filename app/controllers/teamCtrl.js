@@ -5,6 +5,17 @@ var arrayofTeams = []
 
 var teamListObj;
 
+var objofTeams;
+
+// var arrayofTeamsListed = []
+
+let listofTeams = []
+
+
+// let arrayofLeagues = []
+
+
+
 // var newArray = []
 
 //
@@ -25,12 +36,23 @@ var teamListObj;
 //
 // console.log("arraytest", arraytest);
 
-  $scope.checkboxModel = (teams) => {
-      arrayofTeams.push(teamListObj[teams].mlb)
+  $scope.checkboxModel = (key, team) => {
+    //gets the URL or MLB RSS feeds
+    // arrayofTeams.push(team)
+    //
+    // console.log("arrayofTeams", arrayofTeams);
 
+      arrayofTeams.push(teamListObj[key][team])
+
+      // arrayofTeams.push(team)
+      console.log("arrayofTeams", arrayofTeams);
+
+      // URL for mlbtraderumors RSS feeds
+      // arrayofTeams.push(teamListObj[key][team].mlbtr)
+
+      // console.log("arrayofTeams", arrayofTeams);
 
       // console.log(teams)
-      // console.log("arrayofTeams", arrayofTeams);
       // console.log(teamListObj[teams].mlb);
 
     };

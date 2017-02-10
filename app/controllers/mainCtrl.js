@@ -7,7 +7,7 @@ app.controller('MainCtrl', function ($scope, getMLBFactory, getTeamFactory) {
       // .then(function (lists) {
       //   console.log(lists)
       //   $scope.lists = lists
-
+      console.log("$scope.lists", $scope.lists);
 
   }
 
