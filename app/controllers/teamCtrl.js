@@ -71,22 +71,34 @@ let listofTeams = []
   // }
 
 
+  // $scope.teamList = () => {
+  //     getTeamFactory.getTeamList()
+  //       .then(function (teamlists) {
+  //         // console.log('teamlists', teamlists)
+  //         let listOfTeams = Object.keys(teamlists)
+  //         // console.log("listofTeams", listOfTeams);
+  //         $scope.teamlists = listOfTeams
+  //         teamListObj = teamlists
+  //       })
+  //
+  //   }
+  //   $scope.teamList()
+
   $scope.teamList = () => {
       getTeamFactory.getTeamList()
-        .then(function (teamlists) {
-          // console.log('teamlists', teamlists)
-          let listOfTeams = Object.keys(teamlists)
-          // console.log("listofTeams", listOfTeams);
-          $scope.teamlists = listOfTeams
-          teamListObj = teamlists
-        })
+        .then(function (data) {
+          // console.log("data", data);
+          $scope.leagues = data;
+          teamListObj = data
+          })
+
 
     }
     $scope.teamList()
 
 
-    $scope.loopTeamsTest = () => {
-      getMLBFactory.setDataTest(arrayofTeams)
+    $scope.loopTeams = () => {
+      getMLBFactory.setData(arrayofTeams)
         .then(function (data) {
           $location.url("/")
         })
