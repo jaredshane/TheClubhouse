@@ -11,6 +11,25 @@ var objofTeams;
 
 let listofTeams = []
 
+//
+// var dataTest = $http.get('http://mlb.mlb.com/partnerxml/gen/news/rss/atl.xml')
+// console.log("dataTest", dataTest);
+
+// dataTest.then( function (data) {
+//   convert(data.data);
+// })
+//
+// function convert(xml) {
+//   var x2js = new X2JS();
+//   console.log(x2js);
+//   var json = x2js.xml_str2json(xml);
+//   console.log('json', json.rss.channel.item)
+//   return json;
+// }
+
+
+
+
 
 // let arrayofLeagues = []
 
