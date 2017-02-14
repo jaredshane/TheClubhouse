@@ -7,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
-  <body>
-    <div>
+  <body ng-app="theClubhouse">
+    <div ng-view>
 
     </div>
 
+
+    <script src="xml2json.js"></script>
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular-route/angular-route.min.js"></script>
     <script src="lib/firebase/firebase.js"></script>
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/factories/getMLBTR.js"></script>
+    <script src="app/factories/getMLBFactory.js"></script>
+    <script src="app/factories/getTeamFactory.js"></script>
+    <script src="app/controllers/mainCtrl.js"></script>
+    <script src="app/controllers/teamCtrl.js"></script>
   </body>
 </html>

@@ -1,0 +1,131 @@
+{
+  "teams": {
+    "NL": {
+      "Atlanta": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/atl.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/atlanta-braves/feed",
+        "teamname": "Atlanta Braves"
+      },
+      "Miami": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/mia.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/miami-marlins/feed/",
+        "teamname": "Miami Marlins"
+      },
+      "New York NL": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/nym.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/new-york-mets/feed",
+        "teamname": "New York Mets"
+      },
+      "Washington": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/was.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/washington-nationals/feed/"
+      },
+      "Philadelphia": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/phi.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/philadelphia-phillies/feed"
+      },
+      "St. Louis": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/stl.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/st-louis-cardinals/feed"
+      },
+      "Chicago NL": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/chc.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/chicago-cubs/feed"
+      },
+      "Milwaukee": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/mil.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/milwaukee-brewers/feed"
+      },
+      "Pittsburgh": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/pit.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/pittsburgh-pirates/feed"
+      },
+      "Cincinatti": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/cin.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/cincinatti-reds/feed"
+      },
+      "Arizona": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/ari.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/arizona-diamondbacks/feed"
+      },
+      "Los Angeles": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/la.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/los-angeles-dodgers/feed"
+      },
+      "Giants": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/sf.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/san-francisco-giants/feed"
+      },
+      "San Diego": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/sd.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/san-diego-padres/feed"
+      },
+      "Colorado": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/col.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/colorado-rockies/feed"
+      }
+    },
+    "AL" : {
+      "Baltimore": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/bal.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/baltimore-orioles/feed/"
+      },
+      "Boston": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/bos.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/boston-red-sox/feed/"
+      },
+      "New York AL": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/nyy.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/new-york-yankees/feed/"
+      },
+      "Tampa Bay": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/tb.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/tampa-bay-devil-rays/feed/"
+      },
+      "Toronto": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/tor.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/toronto-blue-jays/feed/"
+      },
+      "Chicago AL": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/cws.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/chicago-white-sox/feed/"
+      },
+      "Cleveland": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/cle.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/cleveland-indians/feed/"
+      },
+      "Detroit": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/det.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/detroit-tigers/feed/"
+      },
+      "Kansas City": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/kc.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/kansas-city-royals/feed/"
+      },
+      "Minnesota": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/min.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/minnesota-twins/feed/"
+      },
+      "Houston": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/hou.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/houston-astros/feed/"
+      },
+      "Los Angeles of Anaheim": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/ana.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/los-angeles-angels-of-anaheim/feed/"
+      },
+      "Oakland": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/oak.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/oakland-athletics/feed/"
+      },
+      "Texas": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/tex.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/texas-rangers/feed/"
+      },
+      "Seattle": {
+        "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/sea.xml",
+        "mlbtr": "http://www.mlbtraderumors.com/seattle-mariners/feed/"
+      }
+    }
+  }
+}
