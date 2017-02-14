@@ -1,26 +1,36 @@
-<h1>Main Partial</h1>
-
 <div>
-
-
 
   <div ng-repeat="list in lists">
 
-    <div ng-repeat="whatever in list|limitTo:5" >
-      <h1><a href="{{whatever.getElementsByTagName('link')[0].textContent}}">
-        {{whatever.getElementsByTagName('title')[0].innerHTML}}
-  </a></h1>
-    <p>{{whatever.getElementsByTagName('description')[0].textContent}}</p>
+    <h1>{{list.title}}</h1>
 
+    <div ng-repeat="item in list">
+      <div ng-repeat="data in item|limitTo:5">
+          <h2><a href="{{data.link}}">
+        {{data.title}}
+        </a></h2>
+        <p>{{data.description}}</p>
+      </div>
 
     </div>
 
+        <!-- <div ng-repeat="item in list|limitTo:5" > -->
+
+<!--
+
+          <h2><a href="{{item.link}}">
+        {{item.title}}
+        </a></h2>
+        <p>{{item.description}}</p> -->
+
+
+      <!--</div>--> <!--whatever in list -->
 
 
 
 
-  </div>
+  </div> <!-- list in lists -->
 
 
 
-</div>
+</div> <!--first div -->
