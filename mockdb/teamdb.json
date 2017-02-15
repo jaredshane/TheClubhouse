@@ -8,13 +8,11 @@
       },
       "Miami": {
         "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/mia.xml",
-        "mlbtr": "http://www.mlbtraderumors.com/miami-marlins/feed/",
-        "teamname": "Miami Marlins"
+        "mlbtr": "http://www.mlbtraderumors.com/miami-marlins/feed/"
       },
       "New York NL": {
         "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/nym.xml",
-        "mlbtr": "http://www.mlbtraderumors.com/new-york-mets/feed",
-        "teamname": "New York Mets"
+        "mlbtr": "http://www.mlbtraderumors.com/new-york-mets/feed"
       },
       "Washington": {
         "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/was.xml",
