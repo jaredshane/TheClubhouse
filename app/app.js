@@ -21,4 +21,8 @@ app.config(($routeProvider, $locationProvider) => {
       controller: 'TeamsCtrl',
       templateUrl: 'partials/teams.html'
     })
+    .when('/login', {
+      controller: 'AuthCtrl',
+      templateUrl: 'partials/auth.html'
+    })
 })
