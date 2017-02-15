@@ -32,9 +32,8 @@
 
   <div ng-repeat="(key, teams) in leagues">
     <h1>{{key}}</h1>
-
       <label ng-repeat="(team, urls) in teams">
-      <input type="checkbox" ng-click="checkboxModel(key, team)"> {{team}}
+       <input type="checkbox" ng-click="checkboxModel(key, team, urls)" ng-checked="checkCheckBox(urls)"> {{team}}
       </label>
 
 
@@ -47,3 +46,5 @@
 
 
 <input type="button" value="Get Team News" ng-click="loopTeams()">
+
+<input type="button" value="Save Favorites" ng-click="favoriteSave()">
