@@ -82,7 +82,7 @@ $scope.favoriteSave = () => {
     $scope.loopTeams = () => {
       getMLBFactory.setData($scope.arrayofTeams)
         .then(function (data) {
-          $location.url("/")
+          $location.url("/news")
         })
 
     }
