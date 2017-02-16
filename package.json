@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/jaredshane/TheClubhouse/issues"
   },
-  "homepage": "https://github.com/jaredshane/TheClubhouse#readme"
+  "homepage": "https://github.com/jaredshane/TheClubhouse#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "node-sass": "^4.5.0"
+  }
 }
