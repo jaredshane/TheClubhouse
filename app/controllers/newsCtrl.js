@@ -1,11 +1,15 @@
 
-app.controller('MainCtrl', function ($scope, getMLBFactory, getTeamFactory) {
+app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory) {
 
 
 
     let dataArray = []
     let testArray = []
     let teamNameArray = []
+
+    $(document).ready(function(){
+      $('.collapsible').collapsible();
+    });
 
     let datafromFactory = getMLBFactory.getData()
     dataArray.push(datafromFactory)
@@ -21,7 +25,7 @@ app.controller('MainCtrl', function ($scope, getMLBFactory, getTeamFactory) {
       $scope.lists = testArray
     }
 
-    // 
+    //
     // $scope.assignTeamName = function(teamCode) {
     //   if (teamNameArray.includes(teamCode)) {
     //     return

@@ -1,50 +1,34 @@
-<h1>Team Ctrl</h1>
+<div class="container">
 
-<!-- <form name="myForm">
-  <label>Atlanta:
-    <input type="checkbox" ng-model="checkboxModel.atlanta">
-  </label><br/>
-  <label>Miami:
-    <input type="checkbox" ng-model="checkboxModel.miami">
-   </label><br/>
-   <label>New York NL:
-     <input type="checkbox" ng-model="checkboxModel.newyorknl">
-    </label><br/>
-    <label>Philadelphia:
-      <input type="checkbox" ng-model="checkboxModel.philadelphia">
-     </label><br/>
-     <label>Washington:
-       <input type="checkbox" ng-model="checkboxModel.washington">
-      </label><br/>
-  <tt>Atlanta = {{checkboxModel.atlanta}}</tt><br/>
-  <tt>Miami = {{checkboxModel.miami}}</tt><br/>
-  <input type="button" value="Get Team News">
- </form> -->
+  <h5 class="center-align">Don't forget to save after selecting your favorite teams</h5>
+  <div class="row">
 
-<!-- <div ng-repeat="league in leagues">
-  <div>
-    {{league}}
-  </div>
-</div> -->
+  <div class="leagues  col s5 offset-s1" ng-repeat="(key, teams) in leagues">
+
+
+    <h4>{{key}}</h4>
+    <div ng-repeat="(team, urls) in teams">
+
+        <input class="{{team}}" type="checkbox" ng-click="checkboxModel(key, team, urls)" ng-checked="checkCheckBox(urls)">
+        <label class="teamname" for="{{team}}" ng-click="checkboxModel(key, team, urls)">
+          {{team}}
+        </label>
 
 
 
+    </div> <!--team,urls in teams-->
 
-  <div ng-repeat="(key, teams) in leagues">
-    <h1>{{key}}</h1>
-      <label ng-repeat="(team, urls) in teams">
-       <input type="checkbox" ng-click="checkboxModel(key, team, urls)" ng-checked="checkCheckBox(urls)"> {{team}}
-      </label>
+    </div>
 
 
+  </div> <!--row-->
 
-    <!-- <label ng-repeat="teams in leagues">
-    <input type="checkbox" ng-click="checkboxModel(teams)"> {{teams}}
-    </label> -->
+  <div class="teamNewsButton">
+
+    <input class="waves-effect waves-teal btn-flat " type="button" value="Get Team News" ng-click="loopTeams()">
+
+    <input class="waves-effect waves-teal btn-flat" type="button" value="Save Favorites" ng-click="favoriteSave()">
 
   </div>
 
-
-<input type="button" value="Get Team News" ng-click="loopTeams()">
-
-<input type="button" value="Save Favorites" ng-click="favoriteSave()">
+</div> <!--container -->

@@ -14,8 +14,12 @@ app.config(($routeProvider, $locationProvider) => {
 
   $routeProvider
     .when('/', {
-      controller: 'MainCtrl',
-      templateUrl: 'partials/main.html'
+      controller: 'WelcomeCtrl',
+      templateUrl: 'partials/welcome.html'
+    })
+    .when('/news', {
+      controller: 'NewsCtrl',
+      templateUrl: 'partials/news.html'
     })
     .when('/teams', {
       controller: 'TeamsCtrl',
