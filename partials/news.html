@@ -1,0 +1,47 @@
+<div class="container">
+
+  <!-- <div ng-repeat="list in lists">
+
+    <h1>{{list.title}}</h1>
+
+    <div ng-repeat="item in list">
+      <div ng-repeat="data in item|limitTo:5">
+          <h2><a href="{{data.link}}">
+        {{data.title}}
+        </a></h2>
+        <p>{{data.description}}</p>
+      </div>
+
+    </div> -->
+
+
+
+
+  <!-- </div> <!-- list in lists -->
+
+
+
+  <ul class="collapsible" data-collapsible="accordion">
+  <li ng-repeat="list in lists">
+    <div class="collapsible-header hoverable">{{list.title}}</div>
+
+    <div class="collapsible-body hoverable">
+      <div ng-repeat="item in list">
+        <div ng-repeat="data in item|limitTo:10">
+          <h5><a href="{{data.link}}">
+        {{data.title}}
+      </a></h5>
+          <p>{{data.creator.__text}}</p>
+          <span>{{data.description}}</span>
+        </div>
+
+      </div>
+
+   </div>
+
+  </li>
+</ul>
+
+
+
+</div> <!--first div -->
