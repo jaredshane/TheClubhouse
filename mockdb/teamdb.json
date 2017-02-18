@@ -38,7 +38,7 @@
         "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/pit.xml",
         "mlbtr": "http://www.mlbtraderumors.com/pittsburgh-pirates/feed"
       },
-      "Cincinatti Reds": {
+      "Cincinnati Reds": {
         "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/cin.xml",
         "mlbtr": "http://www.mlbtraderumors.com/cincinatti-reds/feed"
       },
