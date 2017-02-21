@@ -1,4 +1,4 @@
-app.factory('getMLBFactory', function ($http, $q) {
+app.factory('getMLBTRFactory', function ($http, $q) {
   let parseData = {};
   let newArray = []
   var httpArray = []
@@ -36,11 +36,11 @@ app.factory('getMLBFactory', function ($http, $q) {
     // }//setData
     setData : (arrayofTeams) => {
       for (var i = 0; i < arrayofTeams.length; i++) {
-        httpArray.push($http.get(arrayofTeams[i].mlb))
+        httpArray.push($http.get(arrayofTeams[i].mlbtr))
       }
       return $q.all(httpArray)
         .then(function (data) {
-          // console.log("data", data);
+          // console.log("MLBTRdata", data.data);
           for (var i = 0; i < data.length; i++) {
             // console.log("data[i]", data[i]);
             var teamXML = data[i].data
@@ -50,7 +50,7 @@ app.factory('getMLBFactory', function ($http, $q) {
 
 
           }
-          // console.log("parseData", parseData);
+          // console.log("parseMLBTRData", parseData);
           return parseData;
 
 

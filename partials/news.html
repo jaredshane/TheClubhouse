@@ -1,27 +1,69 @@
 <div class="container">
 
-  <!-- <div ng-repeat="list in lists">
+  <div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s3"><a href="#mlb">MLB.com News</a></li>
+      <li class="tab col s3"><a href="#mlbtr">MLBTradeRumors</a></li>
+      <li class="tab col s3"><a href="#reddit">Reddit</a></li>
+    </ul>
+  </div>
 
-    <h1>{{list.title}}</h1>
-
-    <div ng-repeat="item in list">
-      <div ng-repeat="data in item|limitTo:5">
-          <h2><a href="{{data.link}}">
-        {{data.title}}
-        </a></h2>
-        <p>{{data.description}}</p>
-      </div>
-
-    </div> -->
+  <!--MLB.com News -->
+  <div id="mlb" class="col s12">
 
 
+    <ul class="collapsible" data-collapsible="accordion">
+    <li ng-repeat="list in lists">
+      <div class="collapsible-header hoverable">{{list.title}}</div>
+
+      <div class="collapsible-body hoverable">
+        <div ng-repeat="item in list">
+          <div ng-repeat="data in item|limitTo:10">
+            <h5><a href="{{data.link}}">
+              {{data.title}}
+            </a></h5>
+            <p>{{data.creator.__text}}</p>
+            <span>{{data.description}}</span>
+          </div> <!-- data in item -->
+        </div> <!-- item in list -->
+      </div> <!--collapsible body -->
+      </li> <!--list in lists -->
+    </ul> <!--accordian -->
+  </div> <!--#mlb -->
 
 
-  <!-- </div> <!-- list in lists -->
+  <div id="mlbtr" class="col s12">
+
+    <ul class="collapsible" data-collapsible="accordion">
+    <li ng-repeat="data in mlbtrData">
+      <div class="collapsible-header hoverable">{{data.title}}</div>
+
+      <div class="collapsible-body hoverable">
+        <div ng-repeat="items in data">
+          <div ng-repeat="news in items|limitTo:10">
+            <h5><a href="{{news.link}}">
+              {{news.title}}
+            </a></h5>
+            <p>{{news.creator.toString.__cdata}}</p>
+            <span>{{news.description}}</span>
+          </div> <!-- data in item -->
+        </div> <!-- item in list -->
+      </div> <!--collapsible body -->
+      </li> <!--list in lists -->
+    </ul> <!--accordian -->
+  </div> <!--#mlb -->
 
 
 
-  <ul class="collapsible" data-collapsible="accordion">
+  </div>
+
+  <div id="reddit" class="col s12">Subreddit</div>
+</div>
+
+
+
+  <!-- <ul class="collapsible" data-collapsible="accordion">
   <li ng-repeat="list in lists">
     <div class="collapsible-header hoverable">{{list.title}}</div>
 
@@ -40,7 +82,7 @@
    </div>
 
   </li>
-</ul>
+</ul> -->
 
 
 
