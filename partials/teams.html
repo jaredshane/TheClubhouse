@@ -9,7 +9,7 @@
     <h4>{{key}}</h4>
     <div ng-repeat="(team, urls) in teams">
 
-        <input class="{{team}}" type="checkbox" ng-click="checkboxModel(key, team, urls)" ng-checked="checkCheckBox(urls)">
+        <input class="{{team}} filled-in" id="filled-in-box" type="checkbox" ng-click="checkboxModel(key, team, urls)" ng-checked="checkCheckBox(urls)">
         <label class="teamname" for="{{team}}" ng-click="checkboxModel(key, team, urls)">
           {{team}}
         </label>
