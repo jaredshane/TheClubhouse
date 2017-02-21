@@ -1,4 +1,4 @@
-app.controller('TeamsCtrl', function ($scope, $http, $q, getTeamFactory, getMLBFactory, $location, getFavoritesFactory) {
+app.controller('TeamsCtrl', function ($scope, $http, $q, getTeamFactory, getMLBFactory, $location, getFavoritesFactory, getMLBTRFactory) {
 
 
 $scope.arrayofTeams = []
