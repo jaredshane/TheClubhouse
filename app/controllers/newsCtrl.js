@@ -1,29 +1,52 @@
 
-app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory) {
+app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getMLBTRFactory) {
 
 
 
     let dataArray = []
-    let testArray = []
+    let mlbArray = []
     let teamNameArray = []
+    let mlbtrArray = []
+    let tradeArray = []
 
     $(document).ready(function(){
       $('.collapsible').collapsible();
+      $('ul.tabs').tabs();
     });
+
+
 
     let datafromFactory = getMLBFactory.getData()
     dataArray.push(datafromFactory)
-    console.log("datafromFactory", datafromFactory);
-    console.log("dataArray[0]", dataArray[0]);
+    // console.log("datafromFactory", datafromFactory);
+    // console.log("dataArray[0]", dataArray[0]);
 
 
     for (var j in dataArray[0]) {
-      console.log("j", j);
-      console.log("dataArray[0][j]", dataArray[0][j].rss.channel.item);
-      testArray.push(dataArray[0][j].rss.channel)
-      console.log("testArray", testArray);
-      $scope.lists = testArray
+      // console.log("j", j);
+      // console.log("dataArray[0][j]", dataArray[0][j].rss.channel.item);
+      mlbArray.push(dataArray[0][j].rss.channel)
+      // console.log("testArray", testArray);
+      $scope.lists = mlbArray
     }
+
+
+    let datafromMLBTRFactory = getMLBTRFactory.getData()
+    mlbtrArray.push(datafromMLBTRFactory)
+    console.log("datafromMLBTRFactory", datafromMLBTRFactory);
+    console.log("mlbtrArray[0]", mlbtrArray[0]);
+
+
+    for (var l in mlbtrArray[0]) {
+      console.log("l", l);
+      console.log("mlbtrArray[0][l]", mlbtrArray[0][l].rss.channel);
+      tradeArray.push(mlbtrArray[0][l].rss.channel)
+      console.log("tradeArray", tradeArray);
+      $scope.mlbtrData = tradeArray
+    }
+
+
+
 
     //
     // $scope.assignTeamName = function(teamCode) {
