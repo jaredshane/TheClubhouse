@@ -6,6 +6,6 @@ Capstone project for NSS. Get recent news for your favorite teams from multiple 
 [Moqups](https://app.moqups.com/jaredshane/87VRLDztHu/edit/page/a8f1068fa)
 
 
-#Required for app to function properly
+#Required Chrome extension for app to function properly
 
 [Allow-Control-Allow-Origin](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en)
