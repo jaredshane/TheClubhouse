@@ -40,9 +40,9 @@ app.factory('getMLBFactory', function ($http, $q) {
       }
       return $q.all(httpArray)
         .then(function (data) {
-          console.log("data", data);
+          // console.log("data", data);
           for (var i = 0; i < data.length; i++) {
-            console.log("data[i]", data[i]);
+            // console.log("data[i]", data[i]);
             var teamXML = data[i].data
             // console.log("teamXML", teamXML);
               var x2js = new X2JS();
