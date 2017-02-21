@@ -83,10 +83,15 @@ $scope.favoriteSave = () => {
 
     //sets the data to parse upon clicking the 'get team news' button
     $scope.loopTeams = () => {
-      getMLBFactory.setData($scope.arrayofTeams)
-        .then(function (data) {
-          $location.url("/news")
+      getMLBTRFactory.setData($scope.arrayofTeams)
+        .then (function () {
+          getMLBFactory.setData($scope.arrayofTeams)
+          .then(function (data) {
+            $location.url("/news")
+          })
+
         })
+
 
     }
 
