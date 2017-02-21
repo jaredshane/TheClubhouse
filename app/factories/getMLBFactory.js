@@ -50,7 +50,7 @@ app.factory('getMLBFactory', function ($http, $q) {
 
 
           }
-          console.log("parseData", parseData);
+          // console.log("parseData", parseData);
           return parseData;
 
 
