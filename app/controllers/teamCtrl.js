@@ -57,10 +57,10 @@ $scope.favoriteSave = () => {
         window.location='https://www.google.com/search?q=how+many+world+series+have+the+cardinals+own&oq=how+many+world+series+have+the+cardinals+own&aqs=chrome..69i57j0l2j5.5631j0j7&sourceid=chrome&ie=UTF-8#q=How+many+more+World+Series%27+have+the+Cardinals+won+than+the+Cubs'
       }
       $scope.arrayofTeams.push(teamListObj[key][team])
-      console.log("teamListObj[key][team]", team);
+      // console.log("teamListObj[key][team]", team);
 
       // $scope.arrayofTeams.push(team)
-      console.log("$scope.arrayofTeams", $scope.arrayofTeams);
+      // console.log("$scope.arrayofTeams", $scope.arrayofTeams);
 
 
 
@@ -71,7 +71,7 @@ $scope.favoriteSave = () => {
   $scope.teamList = () => {
       getTeamFactory.getTeamList()
         .then(function (data) {
-          console.log("data1", data);
+          // console.log("data1", data);
           $scope.leagues = data;
           teamListObj = data
 

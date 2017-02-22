@@ -50,7 +50,7 @@ app.factory('getMLBTRFactory', function ($http, $q) {
 
 
           }
-          // console.log("parseMLBTRData", parseData);
+          console.log("parseMLBTRData", parseData);
           return parseData;
 
 
