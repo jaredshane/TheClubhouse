@@ -1,5 +1,5 @@
 
-app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getMLBTRFactory) {
+app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getMLBTRFactory, getRedditFactory) {
 
 
 
