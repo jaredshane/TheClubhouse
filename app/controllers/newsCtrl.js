@@ -1,5 +1,5 @@
 
-app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getMLBTRFactory) {
+app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getMLBTRFactory, getRedditFactory) {
 
 
 
@@ -8,6 +8,9 @@ app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getM
     let teamNameArray = []
     let mlbtrArray = []
     let tradeArray = []
+    let redditArray = []
+    let newRedditArray = []
+
 
     $(document).ready(function(){
       $('.collapsible').collapsible();
@@ -33,20 +36,23 @@ app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getM
 
     let datafromMLBTRFactory = getMLBTRFactory.getData()
     mlbtrArray.push(datafromMLBTRFactory)
-    console.log("datafromMLBTRFactory", datafromMLBTRFactory);
-    console.log("mlbtrArray[0]", mlbtrArray[0]);
+    // console.log("datafromMLBTRFactory", datafromMLBTRFactory);
+    // console.log("mlbtrArray[0]", mlbtrArray[0]);
 
 
     for (var l in mlbtrArray[0]) {
-      console.log("l", l);
-      console.log("mlbtrArray[0][l]", mlbtrArray[0][l].rss.channel);
+      // console.log("l", l);
+      // console.log("mlbtrArray[0][l]", mlbtrArray[0][l].rss.channel);
       tradeArray.push(mlbtrArray[0][l].rss.channel)
-      console.log("tradeArray", tradeArray);
+      // console.log("tradeArray", tradeArray);
       $scope.mlbtrData = tradeArray
     }
 
 
-
+    let datafromRedditFactory = getRedditFactory.getData()
+    redditArray.push(datafromRedditFactory)
+    console.log("redditArray[0]", redditArray[0]);
+    $scope.redditData = redditArray[0]
 
     //
     // $scope.assignTeamName = function(teamCode) {

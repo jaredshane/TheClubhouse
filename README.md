@@ -1,5 +1,5 @@
 # TheClubhouse
-Capstone project for NSS. Get recent news for your favorite teams from multiple sources
+Capstone project for NSS. Get recent news for your favorite teams from [MLB.com](http://mlb.com), [MLBTradeRumors.com](https:///mlbtraderumors.com), and your team's [subreddit](https://reddit.com)
 
 [Trello Board](https://trello.com/b/f5VIjCdG/the-clubhouse)
 

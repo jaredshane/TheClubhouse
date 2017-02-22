@@ -1,5 +1,4 @@
 app.controller('WelcomeCtrl', function (getMLBFactory, $scope, $location, getFavoritesFactory) {
-  console.log('welcome')
 
   $scope.gotoTeams = () => {
     $location.url('/teams')
