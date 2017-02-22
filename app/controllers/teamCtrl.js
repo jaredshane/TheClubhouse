@@ -16,13 +16,13 @@ let listofTeams = []
 $scope.getFavorites = () => {
   getFavoritesFactory.getURL()
     .then((data) => {
-      console.log("data", data.data)
+      // console.log("data", data.data)
       for (var i = 0; i < data.data.length; i++) {
-        console.log("data.data[i]", data.data[i]);
+        // console.log("data.data[i]", data.data[i]);
         $scope.arrayofTeams.push(data.data[i]);
 
       }
-      console.log("$scope.arrayofTeams[0]", $scope.arrayofTeams);
+      // console.log("$scope.arrayofTeams[0]", $scope.arrayofTeams);
 
       // for (var i = 0; i < data.data.length; i++) {
       //   data.data[i]
