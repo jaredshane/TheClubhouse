@@ -52,13 +52,31 @@
       </div> <!--collapsible body -->
       </li> <!--list in lists -->
     </ul> <!--accordian -->
-  </div> <!--#mlb -->
+  </div> <!--#mlbtr -->
 
 
 
   </div>
 
-  <div id="reddit" class="col s12">Subreddit</div>
+  <div id="reddit" class="col s12">
+
+    <ul class="collapsible" data-collapsible="accordion">
+    <li ng-repeat="data in redditData">
+      <div class="collapsible-header hoverable">{{data.data.data.children[0].data.subreddit_name_prefixed}}</div>
+
+      <div class="collapsible-body hoverable" ng-repeat="stuff in data.data.data.children">
+
+            <h5><a href="{{stuff.data.url}}">
+              {{stuff.data.title}}
+            </a></h5>
+            <p>{{stuff.data.author}}</p>
+            <span>{{stuff.data.selftext}}</span>
+
+      </div> <!--collapsible body -->
+    </li> <!--data in redditData -->
+    </ul> <!--accordian -->
+
+  </div> <!-- #reddit -->
 </div>
 
 
