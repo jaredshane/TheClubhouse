@@ -36,7 +36,7 @@ $scope.getFavorites()
 
 //save favorites on click of the save favorites button
 $scope.favoriteSave = () => {
-  console.log("$scope.arrayofTeams", $scope.arrayofTeams);
+  // console.log("$scope.arrayofTeams", $scope.arrayofTeams);
   getFavoritesFactory.setFavorites($scope.arrayofTeams)
 }
 
