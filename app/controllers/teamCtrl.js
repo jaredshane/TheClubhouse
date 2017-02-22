@@ -87,10 +87,13 @@ $scope.favoriteSave = () => {
         .then (function () {
           getMLBFactory.setData($scope.arrayofTeams)
           .then(function (data) {
-            $location.url("/news")
-          })
+            getRedditFactory.setData($scope.arrayofTeams)
+              .then(function () {
+                $location.url("/news")
+              }) //then after Reddit Factory
+          }) // then after MLB factory
 
-        })
+        }) //then after MLBTR factory
 
 
     }
