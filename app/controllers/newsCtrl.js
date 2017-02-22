@@ -8,6 +8,9 @@ app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getM
     let teamNameArray = []
     let mlbtrArray = []
     let tradeArray = []
+    let redditArray = []
+    let newRedditArray = []
+
 
     $(document).ready(function(){
       $('.collapsible').collapsible();
