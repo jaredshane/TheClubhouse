@@ -44,12 +44,18 @@ $scope.getFavorites()
 
 //save favorites on click of the save favorites button
 $scope.favoriteSave = () => {
-  // console.log("$scope.arrayofTeams", $scope.arrayofTeams);
   getFavoritesFactory.setFavorites($scope.arrayofTeams)
+    .then( () => {
+        Materialize.toast('Favorites saved!', 2000)
+      $scope.getFavorites()
+    })
+
 }
 
 
-
+$scope.isEqual = (arr1, arr2) => {
+  return _.isEqual(arr1, arr2);
+}
 
 
 //when checking a box of a team, it pushes it to an array
