@@ -28,6 +28,12 @@ app.factory('getMLBFactory', function ($http, $q) {
 
 
         })
-    }//setDataTest
+    },//setDataTest
+    clearData: () => {
+      parseData = {}
+      newArray = []
+      httpArray = []
+      return
+    }
   } //return
 })//factory
