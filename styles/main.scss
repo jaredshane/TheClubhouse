@@ -1,11 +1,16 @@
-.teamname {
-  color: black;
-};
+@import 'colors';
+@import 'teams';
+@import 'news';
+
 
 body {
   background-image: url('/images/background.jpg');
   background-repeat: no-repeat;
 };
+
+.welcome {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 .teamNewsButton {
   margin-left: 24%;
