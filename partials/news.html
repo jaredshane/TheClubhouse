@@ -62,21 +62,23 @@
 
     <ul class="collapsible" data-collapsible="accordion">
     <li ng-repeat="data in redditData">
-      <div class="collapsible-header hoverable">{{data.data.data.children[0].data.subreddit_name_prefixed}}</div>
+      <div class="collapsible-header hoverable ssp">{{data.data.data.children[0].data.subreddit_name_prefixed}}</div>
 
       <div class="collapsible-body hoverable" ng-repeat="stuff in data.data.data.children">
 
-            <h5><a href="{{stuff.data.url}}">
+            <h5 class="ssp"><a class="links" href="{{stuff.data.url}}">
               {{stuff.data.title}}
             </a></h5>
-            <p>{{stuff.data.author}}</p>
-            <span>{{stuff.data.selftext}}</span>
-
+            <p class="ssp">{{stuff.data.author}}</p>
+            <span class="ssp">{{stuff.data.selftext}}</span>
+            <p><a class="links" href="http://reddit.com{{stuff.data.permalink}}">Link to Reddit</a></p>
       </div> <!--collapsible body -->
     </li> <!--data in redditData -->
     </ul> <!--accordian -->
 
   </div> <!-- #reddit -->
+
+  <input type="button" name="" value="Back to teams" ng-click="backtoTeams()">
 </div>
 
 
