@@ -28,5 +28,12 @@ app.factory('getRedditFactory', function ($q, $http) {
     getData : () => {
       return parseData;
     },//getData
+    clearData: () => {
+      console.log("clear");
+      parseData = {}
+      newArray = []
+      httpArray = []
+      return
+    }
   }
 })
