@@ -15,16 +15,16 @@
 
     <ul class="collapsible" data-collapsible="accordion">
     <li ng-repeat="list in lists">
-      <div class="collapsible-header hoverable">{{list.title}}</div>
+      <div class="collapsible-header hoverable ssp">{{list.title}}</div>
 
       <div class="collapsible-body hoverable">
         <div ng-repeat="item in list">
-          <div ng-repeat="data in item|limitTo:10">
-            <h5><a href="{{data.link}}">
+          <div ng-repeat="data in item|limitTo:10 track by $index">
+            <h5 class="ssp"><a class="links" href="{{data.link}}">
               {{data.title}}
             </a></h5>
-            <p>{{data.creator.__text}}</p>
-            <span>{{data.description}}</span>
+            <p class="ssp">{{data.creator.__text}}</p>
+            <span class="ssp">{{data.description}}</span>
           </div> <!-- data in item -->
         </div> <!-- item in list -->
       </div> <!--collapsible body -->
@@ -37,16 +37,16 @@
 
     <ul class="collapsible" data-collapsible="accordion">
     <li ng-repeat="data in mlbtrData">
-      <div class="collapsible-header hoverable">{{data.title}}</div>
+      <div class="collapsible-header hoverable ssp">{{data.title}}</div>
 
       <div class="collapsible-body hoverable">
         <div ng-repeat="items in data">
-          <div ng-repeat="news in items|limitTo:10">
-            <h5><a href="{{news.link}}">
+          <div ng-repeat="news in items|limitTo:10 track by $index">
+            <h5 class="ssp"><a class="links" href="{{news.link}}">
               {{news.title}}
             </a></h5>
-            <p>{{news.creator.toString.__cdata}}</p>
-            <span>{{news.description}}</span>
+            <p class="ssp">{{news.creator.toString.__cdata}}</p>
+            <span class="ssp">{{news.description}}</span>
           </div> <!-- data in item -->
         </div> <!-- item in list -->
       </div> <!--collapsible body -->
