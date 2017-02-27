@@ -4,11 +4,7 @@ app.factory('getFavoritesFactory', function($http){
        return $http.get('https://the-clubhouse-1f0b3.firebaseio.com/user/.json')
      }, //getURL
      setFavorites : (arrayofTeams) => {
-       $http.put('https://the-clubhouse-1f0b3.firebaseio.com/user/.json', arrayofTeams)
-       .then(function (res){
-        //  console.log("res", res);
-         Materialize.toast('Favorites saved!', 2000)
-       })
+       return $http.put('https://the-clubhouse-1f0b3.firebaseio.com/user/.json', arrayofTeams)
      }
    } //return
 })
