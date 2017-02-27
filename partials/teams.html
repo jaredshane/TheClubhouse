@@ -3,15 +3,15 @@
   <h5 class="center-align">Don't forget to save after selecting your favorite teams</h5>
   <div class="row">
 
-  <div class="leagues  col s5 offset-s1" ng-repeat="(key, teams) in leagues">
+  <div class="leagues col s5 offset-s1" ng-repeat="(key, teams) in leagues">
 
 
-    <h4>{{key}}</h4>
+    <h4 class="coolfont">{{key}}</h4>
     <div ng-repeat="(team, urls) in teams">
 
         <input class="{{team}} filled-in" id="filled-in-box" type="checkbox" ng-click="checkboxModel(key, team, urls)" ng-checked="checkCheckBox(urls)">
-        <label class="teamname" for="{{team}}" ng-click="checkboxModel(key, team, urls)">
-          {{team}}
+        <label class="teamname teamList" for="{{team}}" ng-click="checkboxModel(key, team, urls)">
+        <img class="logo" src="{{urls.logo}}" alt="">  {{team}}
         </label>
 
 
