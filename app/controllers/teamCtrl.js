@@ -1,5 +1,6 @@
 app.controller('TeamsCtrl', function ($scope, $http, $q, getTeamFactory, getMLBFactory, $location, getFavoritesFactory, getMLBTRFactory, getRedditFactory) {
 
+$scope.savedTeams = [];
 
 $scope.arrayofTeams = []
 
@@ -22,6 +23,8 @@ $scope.getFavorites = () => {
         $scope.arrayofTeams.push(data.data[i]);
 
       }
+
+      $scope.savedTeams = data;
       // console.log("$scope.arrayofTeams[0]", $scope.arrayofTeams);
 
       // for (var i = 0; i < data.data.length; i++) {
@@ -107,6 +110,8 @@ $scope.favoriteSave = () => {
       }
 
     };
+
+
 
 
 
