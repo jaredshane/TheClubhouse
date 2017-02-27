@@ -1,0 +1,26 @@
+@import 'colors';
+
+
+.teamname {
+  color: black;
+};
+
+
+[type="checkbox"].filled-in:checked+label:after {
+      background-color: $secondaryredcolor;
+      border: 2px solid $secondaryredcolor;
+}
+
+.logo {
+  max-height: 15px;
+  max-width: 15px;
+}
+
+.teamList {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.saveBtn {
+  background-color: $secondaryredcolor;
+  color: white;
+}

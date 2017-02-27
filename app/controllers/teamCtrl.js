@@ -1,5 +1,6 @@
 app.controller('TeamsCtrl', function ($scope, $http, $q, getTeamFactory, getMLBFactory, $location, getFavoritesFactory, getMLBTRFactory, getRedditFactory) {
 
+$scope.savedTeams = [];
 
 $scope.arrayofTeams = []
 
@@ -14,19 +15,26 @@ let listofTeams = []
 //gets the favorites list of Firebase
 
 $scope.getFavorites = () => {
+  console.log("gotFavorites");
   getFavoritesFactory.getURL()
     .then((data) => {
+      $scope.arrayofTeams = [];
+      $scope.savedTeams = [];
+      $scope.isEqual();
       // console.log("data", data.data)
       for (var i = 0; i < data.data.length; i++) {
         // console.log("data.data[i]", data.data[i]);
         $scope.arrayofTeams.push(data.data[i]);
+        $scope.savedTeams.push(data.data[i]);
+
 
       }
-      // console.log("$scope.arrayofTeams[0]", $scope.arrayofTeams);
 
-      // for (var i = 0; i < data.data.length; i++) {
-      //   data.data[i]
-      // }
+
+      console.log("$scope.savedTeams", $scope.savedTeams);
+      console.log("$scope.arrayofTeams", $scope.arrayofTeams);
+
+
     })
 
 }
@@ -36,12 +44,18 @@ $scope.getFavorites()
 
 //save favorites on click of the save favorites button
 $scope.favoriteSave = () => {
-  // console.log("$scope.arrayofTeams", $scope.arrayofTeams);
   getFavoritesFactory.setFavorites($scope.arrayofTeams)
+    .then( () => {
+        Materialize.toast('Favorites saved!', 2000)
+      $scope.getFavorites()
+    })
+
 }
 
 
-
+$scope.isEqual = (arr1, arr2) => {
+  return _.isEqual(arr1, arr2);
+}
 
 
 //when checking a box of a team, it pushes it to an array
@@ -57,10 +71,7 @@ $scope.favoriteSave = () => {
         window.location='https://www.google.com/search?q=how+many+world+series+have+the+cardinals+own&oq=how+many+world+series+have+the+cardinals+own&aqs=chrome..69i57j0l2j5.5631j0j7&sourceid=chrome&ie=UTF-8#q=How+many+more+World+Series%27+have+the+Cardinals+won+than+the+Cubs'
       }
       $scope.arrayofTeams.push(teamListObj[key][team])
-      // console.log("teamListObj[key][team]", team);
 
-      // $scope.arrayofTeams.push(team)
-      // console.log("$scope.arrayofTeams", $scope.arrayofTeams);
 
 
 
@@ -71,7 +82,6 @@ $scope.favoriteSave = () => {
   $scope.teamList = () => {
       getTeamFactory.getTeamList()
         .then(function (data) {
-          // console.log("data1", data);
           $scope.leagues = data;
           teamListObj = data
 
@@ -112,4 +122,6 @@ $scope.favoriteSave = () => {
 
 
 
-})
+
+
+}) //end of controller

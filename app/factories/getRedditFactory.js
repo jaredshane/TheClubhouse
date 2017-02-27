@@ -12,13 +12,11 @@ app.factory('getRedditFactory', function ($q, $http) {
       }
       return $q.all(httpArray)
         .then(function (data) {
-          console.log("reddit data", data);
 
           for (var i = 0; i < data.length; i++) {
             parseData[i] = data[i]
           }
 
-          console.log("parseData", parseData);
           return parseData;
 
         })
@@ -28,5 +26,11 @@ app.factory('getRedditFactory', function ($q, $http) {
     getData : () => {
       return parseData;
     },//getData
+    clearData: () => {
+      parseData = {}
+      newArray = []
+      httpArray = []
+      return
+    }
   }
 })

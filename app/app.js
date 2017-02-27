@@ -4,10 +4,6 @@ app.config(($routeProvider, $locationProvider) => {
   $locationProvider.hashPrefix('')
 
 
-    // $(document).ready(function(){
-    //   $('ul.tabs').tabs('select_tab', 'tab_id');
-    // });
-
 
   firebase.initializeApp({
     apiKey: "AIzaSyCY8KnwE_caToFQDL2qEDH7JeB42SRCzGQ",

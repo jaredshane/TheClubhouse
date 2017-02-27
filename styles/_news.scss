@@ -1,0 +1,23 @@
+@import 'colors';
+
+.tabs .tab a{
+    color:$primaryredcolor;
+}
+.tabs .tab a:hover,.tabs .tab a.active {
+	background-color:transparent;
+	color: $secondaryredcolor;
+}
+.tabs .tab.disabled a,.tabs .tab.disabled a:hover {
+	color:rgba(102,147,153,0.7);
+}
+.tabs .indicator {
+	background-color: $secondaryredcolor;
+}
+
+.ssp {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.links {
+  color: $primaryredcolor;
+}
