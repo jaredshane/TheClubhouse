@@ -128,4 +128,4 @@ $scope.isEqual = (arr1, arr2) => {
 
 
 
-})
+}) //end of controller
