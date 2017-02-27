@@ -54,6 +54,15 @@ app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getM
     console.log("redditArray[0]", redditArray[0]);
     $scope.redditData = redditArray[0]
 
+
+    $scope.backtoTeams = () => {
+      getMLBTRFactory.clearData()
+      getMLBFactory.clearData()
+      getRedditFactory.clearData()
+      $location.url("/teams")
+    }
+
+
     //
     // $scope.assignTeamName = function(teamCode) {
     //   if (teamNameArray.includes(teamCode)) {
