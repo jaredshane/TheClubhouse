@@ -25,6 +25,9 @@ $scope.getFavorites = () => {
       }
 
       $scope.savedTeams = data;
+
+      console.log("$scope.savedTeams", $scope.savedTeams);
+      console.log("$scope.arrayofTeams", $scope.arrayofTeams);
       // console.log("$scope.arrayofTeams[0]", $scope.arrayofTeams);
 
       // for (var i = 0; i < data.data.length; i++) {
