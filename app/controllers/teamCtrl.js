@@ -15,24 +15,26 @@ let listofTeams = []
 //gets the favorites list of Firebase
 
 $scope.getFavorites = () => {
+  console.log("gotFavorites");
   getFavoritesFactory.getURL()
     .then((data) => {
+      $scope.arrayofTeams = [];
+      $scope.savedTeams = [];
+      $scope.isEqual();
       // console.log("data", data.data)
       for (var i = 0; i < data.data.length; i++) {
         // console.log("data.data[i]", data.data[i]);
         $scope.arrayofTeams.push(data.data[i]);
+        $scope.savedTeams.push(data.data[i]);
+
 
       }
 
-      $scope.savedTeams = data;
 
       console.log("$scope.savedTeams", $scope.savedTeams);
       console.log("$scope.arrayofTeams", $scope.arrayofTeams);
-      // console.log("$scope.arrayofTeams[0]", $scope.arrayofTeams);
 
-      // for (var i = 0; i < data.data.length; i++) {
-      //   data.data[i]
-      // }
+
     })
 
 }
