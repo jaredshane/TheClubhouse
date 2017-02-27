@@ -20,31 +20,39 @@ body {
   opacity: 0;
 }
 
-.tabs .tab a{
-    color:#751e1a;
-}
-.tabs .tab a:hover,.tabs .tab a.active {
-	background-color:transparent;
-	color: #bc3138;
-}
-.tabs .tab.disabled a,.tabs .tab.disabled a:hover {
-	color:rgba(102,147,153,0.7);
-}
-.tabs .indicator {
-	background-color: #bc3138;
-}
 
-[type="checkbox"].filled-in:checked+label:after {
-      background-color: #bc3138;
-      border: 2px solid #bc3138;
-}
 
 .btn:hover {
-  background-color: #751e1a;
+  background-color: $primaryredcolor;
 }
 
 input[type="button"]:hover {
-  background-color: #bc3138;
+  background-color: $secondaryredcolor;
   color: white;
   text-shadow: 2px 2px black;
 }
+
+
+@font-face {
+  font-family: AveFedan;
+  src: url('AveFedan_PERSONAL_USE.ttf');
+}
+
+.coolfont {
+  font-family: AveFedan;
+}
+
+// .blink {
+//   animation: blink-animation 1s steps(5, start) infinite;
+//   -webkit-animation: blink-animation 1s steps(5, start) infinite;
+// }
+// @keyframes blink-animation {
+//   to {
+//     visibility: hidden;
+//   }
+// }
+// @-webkit-keyframes blink-animation {
+//   to {
+//     visibility: hidden;
+//   }
+// }
