@@ -1,10 +1,10 @@
-app.controller('WelcomeCtrl', function (getMLBFactory, $scope, $location, getFavoritesFactory) {
+app.controller('WelcomeCtrl', function (getMLBFactory, $scope, $location, getFavoritesFactory, getMLBTRFactory, getRedditFactory) {
 
   $scope.gotoTeams = () => {
     $location.url('/teams')
   }
 
-  // $scope.arrayofTeams = [];
+  $scope.arrayofTeams = [];
   //
   // //sets the data to parse upon clicking the 'get team news' button
   // $scope.loopTeams = () => {
