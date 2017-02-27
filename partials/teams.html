@@ -27,7 +27,7 @@
 
     <input class="waves-effect btn-flat" type="button" value="Get Team News" ng-click="loopTeams()">
 
-    <input class="waves-effect btn-flat" type="button" value="Save Favorites" ng-click="favoriteSave()">
+    <input class="waves-effect btn-flat saveBtn" type="button" value="Save Favorites" ng-class="{blink: {{$scope.arrayOfTeams.length > $scope.savedTeams.length}}}" ng-click="favoriteSave()">
 
   </div>
 
