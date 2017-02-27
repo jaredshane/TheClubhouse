@@ -29,6 +29,13 @@ app.factory('getMLBTRFactory', function ($http, $q) {
 
 
         })
-    }//setDataTest
+    },//setDataTest
+    clearData: () => {
+      console.log("clear");
+      parseData = {}
+      newArray = []
+      httpArray = []
+      return
+    }
   } //return
 })//factory
