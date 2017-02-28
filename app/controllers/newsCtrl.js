@@ -44,7 +44,6 @@ app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getM
 
     let datafromRedditFactory = getRedditFactory.getData()
     redditArray.push(datafromRedditFactory)
-    console.log("redditArray[0]", redditArray[0]);
     $scope.redditData = redditArray[0]
 
 
@@ -56,6 +55,6 @@ app.controller('NewsCtrl', function ($scope, getMLBFactory, getTeamFactory, getM
     }
 
 
-  
+
 
 })

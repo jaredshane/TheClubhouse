@@ -9,7 +9,6 @@ app.controller('WelcomeCtrl', function (getMLBFactory, $scope, $location, getFav
   $scope.getFavorites = () => {
     getFavoritesFactory.getURL()
       .then((data) => {
-        console.log("data", data);
         for (var i = 0; i < data.data.length; i++) {
           $scope.arrayofTeams.push(data.data[i]);
 
