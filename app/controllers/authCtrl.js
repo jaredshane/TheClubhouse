@@ -1,5 +1,4 @@
 app.controller('AuthCtrl', function ($scope, authFactory, $location, getFavoritesFactory) {
-  console.log("authCtrl");
 
 
   $scope.registerButton = function (email, password) {

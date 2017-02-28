@@ -15,7 +15,6 @@ let listofTeams = []
 //gets the favorites list of Firebase
 
 $scope.getFavorites = () => {
-  console.log("gotFavorites");
   getFavoritesFactory.getURL()
     .then((data) => {
       $scope.arrayofTeams = [];
@@ -30,9 +29,6 @@ $scope.getFavorites = () => {
 
       }
 
-
-      console.log("$scope.savedTeams", $scope.savedTeams);
-      console.log("$scope.arrayofTeams", $scope.arrayofTeams);
 
 
     })
