@@ -6,7 +6,7 @@ Get recent and up to date news for your favorite baseball teams from [MLB.com](h
 
 [Moqups](https://app.moqups.com/jaredshane/87VRLDztHu/edit/page/a8f1068fa)
 
-#Technologies Used
+## Technologies Used
 
 1. HTML5, CSS3, Javascript
 2. [SASS](http://sass-lang.com/)
@@ -18,7 +18,7 @@ Get recent and up to date news for your favorite baseball teams from [MLB.com](h
 8. [x2js](https://github.com/abdmob/x2js)
 
 
-#Required Chrome extension
+## Required Chrome extension
 
 This extension is required in order for the app to be able to make the calls to the RSS feeds for the news.
 
