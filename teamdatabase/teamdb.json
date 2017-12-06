@@ -39,7 +39,7 @@
       },
       "Cincinnati Reds": {
         "mlb": "http://mlb.mlb.com/partnerxml/gen/news/rss/cin.xml",
-        "mlbtr": "https://www.mlbtraderumors.com/cincinatti-reds/feed",
+        "mlbtr": "https://www.mlbtraderumors.com/cincinnati-reds/feed/",
         "reddit": "https://www.reddit.com/r/Reds/hot/.json?count=10",
         "logo": "images/nl/cincinnati.png"
       },
